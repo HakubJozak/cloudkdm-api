@@ -1,0 +1,84 @@
+FORMAT: 1A
+HOST: http://api.cloudkdm.com/
+
+# cloudkdm
+
+Polls is a simple API allowing consumers to view polls and vote in them.
+
+## Orders Collection [/orders]
+
+### List All Orders [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "state": "pending",
+                "country": "CZ",
+                "not_before": "2015-08-05T012:40",
+                "not_after":  "2016-08-05T08:40",
+                "cpls": [
+                    "e684137c-d863-4cf6-bdba-83ae0d44ece5", 
+                    "1532cbf6-2e03-4740-8fd5-a11ec33c0baa", 
+                    "fb631678-bc3c-476e-9e13-cc4efb535c90"
+                ],
+                "cinemas": [
+                    "b922c5b3-2299-4637-b7b3-5afacaf57d37", 
+                    "3a35df60-37c8-48ea-9091-2e6bb6ec9a55"
+                ],
+                "screens": [
+                    "31f488e9-edfe-4ce7-aceb-fa36638ff48c",     
+                    "19d67079-8cb6-4a85-aaed-7fce61826fb0",
+                    "f2a37b82-a0b5-46b3-ac1b-2a8e8f3eba3b", 
+                    "4831f01f-3927-47c6-9c02-1675449d4597",
+                    "f18dd127-e274-4679-b3d8-6b640b83b830"
+                ]
+                
+            }
+        ]
+
+### Create a New Order [POST]
+
+You may create your own question using this action. It takes a JSON
+object containing a question and a collection of answers in the
+form of choices.
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
