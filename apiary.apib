@@ -9,26 +9,32 @@ HOST: http://api.cloudkdm.com/
 
 List all movies available to the user.
 
-
 + Response 200 (application/vnd.api+json)
 
-    [
-        { 
+      [
+          { 
+              "titles": {
+                "original": "Asterix: The Mansions of the Gods",
+                "fr": "Astérix: Le domaine des dieux"
+              },
 
-            original_title: "Asterix: The Mansions of the Gods",
-            localized_titles: { fr: "Astérix: Le domaine des dieux" },
-            cpls: [
-                { 
+              "cpls": [
+                  { 
+                    "uuid": "e684137c-d863-4cf6-bdba-83ae0d44ece5", 
+                    "contentTitleText": "AsterixGods_FTR-2-2D_F_EN-EN_UK_51_2K_20160728_DCD_IOP_OV",
+                    "notBefore": "2015-08-05T012:40",
+                    "notAfter":  "2016-08-05T08:40",
+                  },
+                  { 
 
-                  "content_title_text": "AsterixGods_FTR-2-2D_F_EN-EN_UK_51_2K_20160728_DCD_IOP_OV",
-                  "uuid": "e684137c-d863-4cf6-bdba-83ae0d44ece5", 
-                  "not_before": "2015-08-05T012:40",
-                   "not_after":  "2016-08-05T08:40",
-                  not_before: '
-                }
-            ]
-            
-    ]
+                    "uuid": "d349800f-d863-4cf6-bdba-83ae0d44ece5", 
+                    "contentTitleText": "AsterixGods_FTR-2-2D_F_EN-FR_UK_51_2K_20160728_DCD_IOP_OV",
+                    "notBefore": "2015-09-05T012:40",
+                    "notAfter":  "2016-09-05T08:40",
+                  }
+              ]
+         }
+      ]
 
 
 ## Orders Collection [/orders]
@@ -41,8 +47,8 @@ List all movies available to the user.
             {
                 "state": "pending",
                 "country": "CZ",
-                "not_before": "2015-08-05T012:40",
-                "not_after":  "2016-08-05T08:40",
+                "notBefore": "2015-08-05T012:40",
+                "notAfter":  "2016-08-05T08:40",
                 "cpls": [
                     "e684137c-d863-4cf6-bdba-83ae0d44ece5", 
                     "1532cbf6-2e03-4740-8fd5-a11ec33c0baa", 
@@ -73,7 +79,7 @@ When you create an Order for a set of CPLs and Cinemas/Screens
 + cpls (array[uuid]) - list of CPL UUIDs
 + cinemas (array[uuid]) - list of Cinema UUIDs
 
-+ Request (application/json)
++ Request (application/vnd.api+json)
 
 
         {
@@ -98,7 +104,7 @@ When you create an Order for a set of CPLs and Cinemas/Screens
                 ]
                         
         }
-+ Response 201 (application/json)
++ Response 201 201 (application/json)
 
     + Headers
 
