@@ -11,31 +11,31 @@ List all movies available to the user.
 
 + Response 200 (application/vnd.api+json)
 
-      [
-          { 
-              "uuid": "e684137c-d863-4cf6-bdba-83ae0d44ece5",
-              "titles": {
-                "original": "Asterix: The Mansions of the Gods",
-                "fr": "Astérix: Le domaine des dieux"
-              },
-
-              "cpls": [
-                  { 
-                    "uuid": "e684137c-d863-4cf6-bdba-83ae0d44ece5", 
-                    "contentTitleText": "AsterixGods_FTR-2-2D_F_EN-EN_UK_51_2K_20160728_DCD_IOP_OV",
-                    "notBefore": "2015-08-05T012:40",
-                    "notAfter":  "2016-08-05T08:40",
+          [
+              { 
+                  "uuid": "e684137c-d863-4cf6-bdba-83ae0d44ece5",
+                  "titles": {
+                    "original": "Asterix: The Mansions of the Gods",
+                    "fr": "Astérix: Le domaine des dieux"
                   },
-                  { 
-
-                    "uuid": "d349800f-d863-4cf6-bdba-83ae0d44ece5", 
-                    "contentTitleText": "AsterixGods_FTR-2-2D_F_EN-FR_UK_51_2K_20160728_DCD_IOP_OV",
-                    "notBefore": "2015-09-05T012:40",
-                    "notAfter":  "2016-09-05T08:40",
-                  }
-              ]
-         }
-      ]
+    
+                  "cpls": [
+                      { 
+                        "uuid": "e684137c-d863-4cf6-bdba-83ae0d44ece5", 
+                        "contentTitleText": "AsterixGods_FTR-2-2D_F_EN-EN_UK_51_2K_20160728_DCD_IOP_OV",
+                        "notBefore": "2015-08-05T012:40",
+                        "notAfter":  "2016-08-05T08:40",
+                      },
+                      { 
+    
+                        "uuid": "d349800f-d863-4cf6-bdba-83ae0d44ece5", 
+                        "contentTitleText": "AsterixGods_FTR-2-2D_F_EN-FR_UK_51_2K_20160728_DCD_IOP_OV",
+                        "notBefore": "2015-09-05T012:40",
+                        "notAfter":  "2016-09-05T08:40",
+                      }
+                  ]
+             }
+          ]
 
 ## A Movie [/movies/{uuid}]
 
@@ -155,13 +155,13 @@ When you create an Order for a set of CPLs and Cinemas/Screens
 
 + Response 200 (application/vnd.api+json)
 
-    [
-      {
-         "en": "Czech Republic"
-         "code": "CZ"
-      },
-      {
-         "en": "India"
-         "code": "ID"
-      }
-    ]
+        [
+          {
+             "en": "Czech Republic"
+             "code": "CZ"
+          },
+          {
+             "en": "India"
+             "code": "ID"
+          }
+        ]
