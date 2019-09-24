@@ -1,15 +1,41 @@
 FORMAT: 1A
 HOST: http://api.cloudkdm.com/
 
-# cloudkdm
+# CloudKDM
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+## Movies Collection [/movies]
+
+### List All Movies [GET]
+
+List all movies available to the user.
+
+
++ Response 200 (application/vnd.api+json)
+
+    [
+        { 
+
+            original_title: "Asterix: The Mansions of the Gods",
+            localized_titles: { fr: "Astérix: Le domaine des dieux" },
+            cpls: [
+                { 
+
+                  "content_title_text": "AsterixGods_FTR-2-2D_F_EN-EN_UK_51_2K_20160728_DCD_IOP_OV",
+                  "uuid": "e684137c-d863-4cf6-bdba-83ae0d44ece5", 
+                  "not_before": "2015-08-05T012:40",
+                   "not_after":  "2016-08-05T08:40",
+                  not_before: '
+                }
+            ]
+            
+    ]
+
 
 ## Orders Collection [/orders]
 
 ### List All Orders [GET]
 
-+ Response 200 (application/json)
++ Response 200 (application/vnd.api+json)
 
         [
             {
